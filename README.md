@@ -41,7 +41,7 @@ import newtrap
 ```    
 ## Example from included test program
 
-![](Figure_1.png)
+![Single test plot](test/Figure_1.png)
 
 Here x is chasing a noisy x^2 target
 
