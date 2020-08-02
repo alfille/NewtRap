@@ -1,5 +1,5 @@
 # NewtRap
-## Newton-Raphon method process control
+## Newton-Raphson method process control
  The idea is to find the input 'x' that gives an output closest to target
 
  There is (optional) bounding limits on x: 'lo' and 'hi' 
