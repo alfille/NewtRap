@@ -1,5 +1,5 @@
 # NewtRap
-# Newton-Raphon method process control
+## Newton-Raphon method process control
  The idea is to find the input 'x' that gives an output closest to target
 
  There is (optional) bounding limits on x: 'lo' and 'hi' 
@@ -9,7 +9,7 @@
  Needs no other modules
  (The test program uses matplotlib, random and numpy)
 
-# Method:
+## Method:
  Newton-Raphson for finding a function zero:
  
  x1 = x0 - f(x0)/f'(x0)
@@ -18,19 +18,16 @@
  We could choose 2 close points, but that would lead to instability with small output errors
  so we choose the midpoint
 
-# Written by Paul H Alfille 2020
+## Written by Paul H Alfille 2020
 
-# Usage:
- import NewtRap
+## Usage:
+```python
+import NewtRap
  
  target = 10
- 
  error = .2
- 
  x0 = 1
- 
  lo = 0
- 
  hi = 2
  
  nr = NewtRap.NewtRap( target, error=error, lo=lo, hi=hi, x0=x0 )
@@ -38,11 +35,13 @@
  x = x0
  
  while True:
- 
     y = my_process(x)
-
-    print(x,y)
-    
+    print(x,y)    
     x = nr.next(y)
-    
+```    
+## Example from included test program
+
 ![](Figure_1.png)
+
+Here x is chasing a noisy x^2 target
+
