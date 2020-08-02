@@ -44,3 +44,5 @@
     print(x,y)
     
     x = nr.next(y)
+    
+![](Figure_1.png)
