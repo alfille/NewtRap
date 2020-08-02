@@ -13,11 +13,14 @@
 # Newton-Raphson for finding a function zero:
 # x1 = x0 - f(x0)/f'(x0)
 #
-# since we don't have a dirivative, we need to points to get a difference
+# since we don't have a derivative, we need to points to get a difference
 # We could choose 2 close points, but that would lead to instability with small output errors
 # so we choose the midpoint
 #
 # Written by Paul H Alfille 2020
+# MIT license
+#
+# see https://github.com/alfille/NewtRap
 #
 # Usage:
 # import NewtRap
