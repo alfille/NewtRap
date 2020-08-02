@@ -65,7 +65,7 @@ We could either:
 ### newtrap.test4.py -- unbounded run
 ![unbounded](test/Figure_4.png)
 
-What happens if we don't specify the bounds? Much slower. Hypothesis is that we have no characteristic scale for x. 
+What happens if we don't specify the bounds? Much slower approach to stable solution. Hypothesis is that we have no characteristic scale for x -- the bounds were adding some scale.
 
 
 
