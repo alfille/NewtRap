@@ -55,10 +55,17 @@ Lets' go the the test directory
 ## So does that scale?
 ### newtrap_test3.py -- Increase everything 1 billion-fold
 ![Billion-fold](test/Figure_3.png)
+
 Not as stable.
 We could either:
 1. Low-pass filter the control choices, or
 1. Find a way to do better scaling
+
+## Bounds for scaling
+### newtrap.test4.py -- unbounded run
+![unbounded](test/Figure_4.png)
+
+What happens if we don't specify the bounds? Much slower. Hypothesis is that we have no characteristic scale for x. 
 
 
 
