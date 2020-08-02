@@ -45,3 +45,21 @@ import newtrap
 
 Here x is chasing a noisy x^2 target
 
+## More detail
+Lets' go the the test directory
+### newtrap_test2.py:
+![errors](test/Figure_2.png)
+1. Targetting is good (though there seems to be a persistent offset)
+1. The scale of the difference in the X-points (used for the differential) gets appropriately small until perturbed.
+1. If you look in the code, there is some arbitrary choices for when the differences are wrong. I.e. when a new target is specified, the different is arbitrarily put at 1
+## So does that scale?
+### newtrap_test3.py -- Increase everything 1 billion-fold
+![Billion-fold](test/Figure_3.png)
+Not as stable.
+We could either:
+1. Low-pass filter the control choices, or
+1. Find a way to do better scaling
+
+
+
+
