@@ -22,7 +22,7 @@
 
 ## Usage:
 ```python
-import NewtRap
+import newtrap
  
  target = 10
  error = .2
@@ -30,7 +30,7 @@ import NewtRap
  lo = 0
  hi = 2
  
- nr = NewtRap.NewtRap( target, error=error, lo=lo, hi=hi, x0=x0 )
+ nr = newtrap.NewtRap( target, error=error, lo=lo, hi=hi, x0=x0 )
 
  x = x0
  

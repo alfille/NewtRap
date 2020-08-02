@@ -1,7 +1,7 @@
 # test program for newtrap
 # Paul H Alfille
 
-import newtrap as nr
+import newtrap
 import numpy as np
 
 import matplotlib.pyplot as plt
@@ -14,7 +14,7 @@ lo = 0
 hi = 10
 err = .01
 target = 4
-nr = nr.NewtRap( target, err, lo, hi )
+nr = newtrap.NewtRap( target, err, lo, hi )
 
 fig = plt.figure()
 
