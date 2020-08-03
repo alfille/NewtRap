@@ -67,6 +67,22 @@ We could either:
 
 What happens if we don't specify the bounds? Much slower approach to stable solution. Hypothesis is that we have no characteristic scale for x -- the bounds were adding some scale.
 
+## Over-reach to approach target from each side
+### newtrap_test5.py -- Failure
+Rementer that we are trying to model Newton-Raphson method:
 
+ x1 = x0 - f(x0)/f'(x0)
+
+ but need to use 2 points to find slope (derivative)
+ ![Bad art](test/outreach.png)
+ 
+ 1. Start with points x0 and x1
+ 1. find slope though them projected from midpoint xm
+ 1. New points are x2 where the line crosses and the midpoint x2m
+ 1. What if we sometimes use x2M when the target is being approached only from below?
+ ![Fig5](test/Figure_5.png)
+ 
+ Much worse -- failed experiment.
+ 
 
 
