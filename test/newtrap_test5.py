@@ -1,17 +1,17 @@
 # test program for newtrap
 # Paul H Alfille
 
-# version 3 -- change scale billionfold
+# version 5 -- overshoot code
 
 
-import newtrap_1234 as newtrap
+import newtrap_5 as newtrap
 
 import numpy as np
 
 import matplotlib.pyplot as plt
 import random
 
-S = 1e9
+S = 1
 lo = 0*S
 hi = 10*S
 err = .01*S
@@ -21,6 +21,7 @@ target2 = 6*S
 def f( x ):
     return x ** 2 + S*random.random()
 
+#nr = newtrap.NewtRap( target1, err, lo, hi )
 nr = newtrap.NewtRap( target1, err, lo, hi )
 
 fig = plt.figure()
@@ -47,7 +48,7 @@ plt.subplot(211)
 plt.plot(xs,label="control (x)")
 plt.plot(np.clip(ys,lo,hi),label="response (y)")
 plt.plot(ts,label="target")
-plt.title('NewtRap example -- Billion-fold')
+plt.title('NewtRap example -- outreach')
 plt.legend()
 plt.subplot(212)
 plt.plot(np.abs(ds),label="dx -- control band")

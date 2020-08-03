@@ -3,11 +3,7 @@
 
 # version 2 -- add second plot and clean up loop
 
-
-# Ugly -- import NewtRap from parent directory
-import sys            # for sys.path
-sys.path.append("..") # add parent
-import newtrap        # from parent
+import newtrap_1234 as newtrap
 
 import numpy as np
 
