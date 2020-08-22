@@ -4,7 +4,7 @@
 # version 5 -- overshoot code
 
 
-import newtrap_6 as newtrap
+import newtrap_7 as newtrap
 
 import numpy as np
 
@@ -48,7 +48,7 @@ plt.subplot(211)
 plt.plot(xs,label="control (x)")
 plt.plot(np.clip(ys,lo,hi),label="response (y)")
 plt.plot(ts,label="target")
-plt.title('NewtRap example -- modular')
+plt.title('NewtRap example -- bad angle correction')
 plt.legend()
 plt.subplot(212)
 plt.plot(np.abs(ds),label="dx -- control band")

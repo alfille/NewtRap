@@ -1,0 +1,41 @@
+/*
+Maxima file to look at NewtRap algorithm
+This is for version 11 that has a IIR step
+
+Honestly, just looking at the code I can see that IIR should be done on alternate values
+
+Paul Alfille
+*/
+
+/* Sample function f(x), g(w) */
+f[n]:=x[n]^2 - 4;
+g[n]:=w[n]^2 - 4;
+
+/* 
+The algorithm already alternates projected value and half point to get a slope
+here we give them different names:
+x - projected value
+w - half point
+*/
+   
+x[1]:x1;
+w[1]:w1;
+
+/* Averages */
+xa[n]:=(x[n]+w[n])/2;
+fa[n]:=(f[n]+g[n])/2;
+
+/* Newton Raphson */
+x[2]:xa[1] - fa[1] * (x[1]-w[1]) / (f[1]-g[1]),expand,factor;
+/* Mid point of new point and old */
+w[2]:x[2]/2+xa[1]/2,expand,factor;
+
+/* IIR with alpha=.5 */
+x[n]:=w[n-1]/2+( xa[n-1] - fa[n-1] * (x[n-1]-w[n-1])/(f[n-1]-g[n-1]) )/2,expand,factor;
+w[n]:=x[n]/2 + (x[n]+xa[n-1])/4,expand,factor;
+
+x[3],expand,factor;
+w[3],expand,factor;
+
+x[4],expand,factor;
+w[4],expand,factor;

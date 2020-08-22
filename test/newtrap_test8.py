@@ -4,14 +4,14 @@
 # version 5 -- overshoot code
 
 
-import newtrap_6 as newtrap
+import newtrap_8 as newtrap
 
 import numpy as np
 
 import matplotlib.pyplot as plt
 import random
 
-S = 1
+S = 1e9
 lo = 0*S
 hi = 10*S
 err = .01*S
@@ -48,7 +48,7 @@ plt.subplot(211)
 plt.plot(xs,label="control (x)")
 plt.plot(np.clip(ys,lo,hi),label="response (y)")
 plt.plot(ts,label="target")
-plt.title('NewtRap example -- modular')
+plt.title('NewtRap example -- iir filter')
 plt.legend()
 plt.subplot(212)
 plt.plot(np.abs(ds),label="dx -- control band")
